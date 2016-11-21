@@ -11,7 +11,25 @@
   position: relative;
   left: 140px;
 }
+@keyframes blink {
+  50% {
+    background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+      background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+    }
+}
+@-moz-keyframes blink {
+  50% {
+      background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+    }
+}
 .brain {
+  animation: blink .5s infinite;
+  -webkit-animation: blink .5s infinite;
+  -moz-animation: blink .5s infinite;
   background-color: #cc5;
   height: 150px;
   width: 150px;
@@ -32,6 +50,33 @@
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-radius: 20px 20px 100px 100px;
+}
+.left {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: rotate(200deg);
+  -webkit-transform: rotate(200deg);
+  -moz-transform: rotate(200deg);
+  position: relative;
+  top: -320px;
+  left: -190px;
+  z-index: -1;
+
+}
+.right {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: scaleY(-1) rotate(20deg);
+  -webkit-transform: scaleY(-1) rotate(20deg);
+  -moz-transform: scaleY(-1) rotate(20deg);
+  position: relative;
+  top: -620px;
+  left: 190px;
+  z-index: -1;
 }
 .foot {
   height: 30px;
