@@ -1,6 +1,20 @@
 body {
   text-align: center;
-  background-color: #357183;
-  color: black;
+  background: url("../assets/anna-bg.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
   font-family: helvetica;
+}
+p {
+  font-size: 22px;
+}
+input {
+  border: 0;
+  padding: 10px;
+  font-size: 18px;
+}
+input[type="submit"] {
+  color: white;
+  background-color: red; 
 }
