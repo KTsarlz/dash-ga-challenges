@@ -1,0 +1,40 @@
+div {
+  height: 150px;
+  width: 300px;
+  margin: 0 auto;
+  /*background: #cc5;*/
+}
+.beep {
+  width: 5px;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom: 80px solid #888;
+  border-top: 10px solid #777;
+}
+.brain {
+  background-color: #cc5;
+  height: 150px;
+  width: 150px;
+  border-radius: 60px 60px 0px 0px;
+  border-bottom: 40px dotted #666;
+  background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  /*background-size: 75px 150px;*/
+  background-size: 50% 100%;
+}
+.torso {
+  height: 0;
+  width: 140px;
+  border-top: 300px solid #bc6;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-radius: 20px 20px 100px 100px;
+}
+.foot {
+  height: 30px;
+  width: 30px;
+  background-color: #ccc;
+  border-radius: 40px;
+  border: 15px solid #999;
+}
