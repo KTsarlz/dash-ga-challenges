@@ -26,10 +26,13 @@
       background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;
     }
 }
-.brain {
+.laser {
   animation: blink .5s infinite;
   -webkit-animation: blink .5s infinite;
   -moz-animation: blink .5s infinite;
+
+}
+.brain {
   background-color: #cc5;
   height: 150px;
   width: 150px;

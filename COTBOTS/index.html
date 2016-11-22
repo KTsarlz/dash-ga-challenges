@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
   </head>
   <body>
     <div class="robot">
@@ -21,5 +23,21 @@
       <div class="foot"></div>
 
     </div>
+    <button class="flash">Laser eyes on/off</button>
+    <button class="color">Change color!</button>
+    <script>
+    // When eyes button is clicked, toggle laser class
+      $(".flash").click(function() {
+        $(".brain").toggleClass('laser');
+      });
+
+      $(".color").click(function() {
+        var red = Math.floor(Math.random() * 255);
+        var green = Math.floor(Math.random() * 255);
+        var blue = Math.floor(Math.random() * 255);
+
+        alert(red + "," + green + "," + blue);
+      });
+    </script>
   </body>
 </html>
