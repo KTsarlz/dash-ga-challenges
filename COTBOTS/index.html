@@ -25,6 +25,9 @@
     </div>
     <button class="flash">Laser eyes on/off</button>
     <button class="color">Change color!</button>
+    <button class="moves">Take a break!</button>
+
+    <img src="assets/dance_cotter.gif" alt="">
     <script>
     // When eyes button is clicked, toggle laser class
       $(".flash").click(function() {
@@ -32,11 +35,19 @@
       });
 
       $(".color").click(function() {
+        // Assign each color
         var red = Math.floor(Math.random() * 255);
         var green = Math.floor(Math.random() * 255);
         var blue = Math.floor(Math.random() * 255);
 
-        alert(red + "," + green + "," + blue);
+        //Generate the RGBA value from gree, red, blue
+        var randomRGBA = 'rgba('+red+','+green+','+blue+',1)'
+        //Display the color
+        document.body.style.background = randomRGBA;
+      });
+
+      $(".moves").click(function() {
+        $("img").toggle();
       });
     </script>
   </body>
