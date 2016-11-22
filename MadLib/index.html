@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <title>Mad Libs game</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Shadows+Into+Light" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
   </head>
@@ -23,19 +27,17 @@
          var currentPrompt = 0;
         // Function that wil call the next prompt
          var nextPrompt = function() {
-
           // there's no answer for the first time nextPrompt
           if (currentPrompt != 0) {
             answers.push($('input').val());
           }
-
            // If there is a next prompt
            if (currentPrompt < prompts.length) {
              // Alert the val
             //  alert($('input').val());
              // pur prompt and form into the html
-              $(".prompt").html(prompts[currentPrompt] + '<br><input type="text" />');
-              currentPrompt+=1;
+            $(".prompt").html(prompts[currentPrompt] + '<br><input type="text" />');
+            currentPrompt+=1;
            }
            else {
             //  $(".prompt").html("That's all for now");
@@ -45,7 +47,9 @@
          }
          // puts the user's input into the html
          var showFinal = function() {
-          $('.prompt').html(answers[0] + ' ' +answers[1] + ' ' + answers[2]);
+          $('.prompt').html('This is the story of <span class="fill">'+ answers[0] + '</span> and the <span class="fill">' +answers[1] + '</span> <span class="fill"> '+ answers[2]+'</span>. ');
+          // and then hide your button
+          $("button").hide();
          }
 
          //run next prompt when button ic clicked
