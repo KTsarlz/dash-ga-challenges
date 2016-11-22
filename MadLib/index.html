@@ -13,20 +13,39 @@
       <button>Next</button>
 
       <script>
-         var prompts = ['Type your name' , 'Type your adjective' , 'Type a noun'];
-
-         //alert(prompts.length);
+        // List of prompts
+         var prompts = ['Type your name' ,
+                        'Type your adjective' ,
+                        'Type a noun'];
+        // Array for answers
+        var answers = [];
+        // Keeps track of current prompt we're on
          var currentPrompt = 0;
-
+        // Function that wil call the next prompt
          var nextPrompt = function() {
+
+          // there's no answer for the first time nextPrompt
+          if (currentPrompt != 0) {
+            answers.push($('input').val());
+          }
+
+           // If there is a next prompt
            if (currentPrompt < prompts.length) {
-             //Put currentPrompt in all html class
-              $(".prompt").html(prompts[currentPrompt]);
+             // Alert the val
+            //  alert($('input').val());
+             // pur prompt and form into the html
+              $(".prompt").html(prompts[currentPrompt] + '<br><input type="text" />');
               currentPrompt+=1;
            }
            else {
-             $(".prompt").html("That's all for now");
+            //  $(".prompt").html("That's all for now");
+            //  alert(answers);
+            showFinal();
            }
+         }
+         // puts the user's input into the html
+         var showFinal = function() {
+          $('.prompt').html(answers[0] + ' ' +answers[1] + ' ' + answers[2]);
          }
 
          //run next prompt when button ic clicked
