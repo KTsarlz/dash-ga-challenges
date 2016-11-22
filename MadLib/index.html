@@ -9,16 +9,26 @@
   </head>
   <body>
 
-      <div class="prompt">
-
-      </div>
+      <div class="prompt"></div>
+      <button>Next</button>
 
       <script>
          var prompts = ['Type your name' , 'Type your adjective' , 'Type a noun'];
 
          //alert(prompts.length);
+         var currentPrompt = 0;
 
-         $(".prompt").html(prompts[1]);
+         var nextPrompt = function() {
+         //Put currentPrompt in all html class
+         $(".prompt").html(prompts[currentPrompt]);
+         currentPrompt+=1;
+         }
+         //run next prompt when button ic clicked
+         $('button').click(function(){
+           nextPrompt();
+         });
+
+
       </script>
   </body>
 </html>
